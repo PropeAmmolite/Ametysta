@@ -1,0 +1,42 @@
+{
+  "name": "sims-tree",
+  "version": "1.0.0",
+  "description": "Ametysta For simple trees",
+  "main": "main.js",
+  "author": "Phoenix lunaire",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^27.0.0",
+    "electron-builder": "^26.15.3"
+  },
+  "build": {
+    "appId": "com.ametysta.simstree",
+    "asar": true,
+    "productName": "Ametysta",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "build/icon.ico",
+      "styles.css",
+      "app.js"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Ametysta"
+    }
+  }
+}
